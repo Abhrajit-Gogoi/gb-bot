@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Abhrajit-Gogoi/gb-bot#readme",
   "dependencies": {
     "@slack/bolt": "^5.1.0",
+    "axios": "^1.20.0",
     "dotenv": "^17.4.2"
   }
 }
