@@ -52,7 +52,34 @@ app.command("/gb-bot-help", async ({ ack, respond }) => {
   });
 });
 
+app.command("/gb-bot-catfact", async ({ ack, respond }) => {
+  await ack();
+  try {
+    const response = await fetch("https://catfact.ninja/fact");
+    const data = await response.json();
+    await respond({
+      response_type: "in_channel",
+      text: `🐱 *Cat Fact:* ${data.fact}`
+    });
+  } catch (error) {
+    await respond({ text: "Unable to retrieve cat fact at this time." });
+  }
+});
 
+app.command("/gb-bot-qotd", async ({ ack, respond }) => {
+  await ack();
+  try {
+    const response = await fetch("https://zenquotes.io/api/today");
+    const data = await response.json();
+    const quote = data[0];
+    await respond({
+      response_type: "in_channel",
+      text: `💬 *Quote of the Day*\n\n"> ${quote.q}"\n— *${quote.a}*`
+    });
+  } catch (error) {
+    await respond({ text: "Unable to retrieve quote of the day at this time." });
+  }
+});
 
 app.command("/gb-bot-weather", async ({ ack, respond }) => {
   await ack();
