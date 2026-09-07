@@ -20,3 +20,12 @@ app.command("/gb-bot-ping", async ({ command, ack, respond }) => {
   console.log("bot is running!");
 })();
 
+app.command("/gb-bot-help", async ({ ack, respond }) => {
+  await ack();
+  await respond({
+    text:
+`Available Commands:
+/gb-bot-ping - Check bot latency
+/gb-bot-catfact - Get a cat fact`
+  });
+});
