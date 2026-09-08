@@ -1,5 +1,8 @@
 Hello World!!
-   This is my personal slack bot project call "THE GB-BOT". It is a fun basic bot which can tell you the weather in 5 cities, a cute fact about cats and the quote of the day. It also has a /gb-bot-help command to show you the available commands.
+
+This is my personal slack bot project call "THE GB-BOT". It is a fun basic bot which can tell you the weather in 5 cities, a cute fact about cats and the quote of the day. It also has a /gb-bot-help command to show you the available commands.
+
+try it at: https://hackclub.enterprise.slack.com/archives/C0P5NE354
 
 Available commands:
 
